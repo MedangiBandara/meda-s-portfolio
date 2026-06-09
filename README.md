@@ -144,4 +144,4 @@ Universities should adopt a balanced assessment framework that combines traditio
 ## Author
 **Medangi Bandara**  
 Master of Management Information Systems Student  
-Data Analytics | Business Analysis | Project Management
+Data Driven Decision Making | Business Analysis | Data Analytics
