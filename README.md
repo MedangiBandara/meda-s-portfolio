@@ -1,110 +1,173 @@
-# meda-s-portfolio
-Data Analytics Portfolio 
-# Students' AI Usage and Academic Performance Analysis
+# AI Usage and Academic Performance Analysis
 
 ## Project Overview
+This data analytics portfolio project explores whether universities should redesign traditional assessment systems to better evaluate student capability in AI-assisted learning environments.
 
-This data analytics project investigates whether universities should redesign traditional assessment systems to better evaluate students' capabilities in AI-assisted learning environments.
+The analysis investigates how AI usage is associated with academic performance, study effort, and student learning practices using a student AI usage and academic performance dataset from Kaggle.
 
-With the increasing use of generative AI tools, universities need to understand whether traditional exams and written assignments still provide reliable evidence of independent learning, analytical thinking, and genuine student capability.
+**Dataset:** [Students AI Usage and Academic Performance](https://www.kaggle.com/datasets/aminasalamt/students-ai-usage-and-academic-performance/data)
+
+---
 
 ## Managerial Problem
-
 **Should universities redesign traditional assessment systems to more accurately evaluate students' capabilities in AI-assisted learning environments?**
 
-The key decision-makers include:
+The key decision-makers are course coordinators, unit coordinators, and lecturers responsible for assessment design, grading, academic integrity, and learning quality assurance.
 
-- Course coordinators
-- Unit coordinators
-- Lecturers
-- Assessment Panel
+As generative AI tools become increasingly integrated into higher education, universities need to assess whether traditional exams and written assignments still provide valid evidence of independent learning, critical thinking, and student competence.
 
-## Dataset
+---
 
-Dataset used: [Students' AI Usage and Academic Performance](https://www.kaggle.com/datasets/aminasalamt/students-ai-usage-and-academic-performance/data)
+## Business Context
+AI tools can improve learning efficiency and academic performance, but they may also change how students study, complete assignments, and demonstrate knowledge. If assessment systems do not adapt, academic results may not accurately reflect students' real skills, graduate readiness, or ethical learning practices.
 
-## Key Questions
+This project uses data analysis to support evidence-based decisions about assessment redesign in AI-assisted learning environments.
 
-1. Do students' grades improve after using AI tools?
-2. Does study time still strongly relate to academic performance?
-3. How are students using AI for academic purposes?
+---
 
-## Tools Used
-
-- Python
+## Tools and Technologies
+- Microsoft Excel
 - Power BI
+- Python
 - GitHub
 
+---
+
 ## Data Preparation
+The dataset was cleaned and filtered to align with the managerial problem. The preparation process included:
 
-The dataset was prepared by:
-
-- Removing missing values
+- Checking missing values
 - Removing duplicate records
-- Checking numerical fields for consistency
-- Standardising categorical variables
-- Preparing data for visual analysis
+- Filtering college students who actively used AI tools
+- Removing non-applicable values in `purpose_of_ai_usage`
+- Selecting variables relevant to AI-assisted learning and academic performance
 
-## Analysis Methods
+The final analysis focused on 20 valid observations.
 
-The following analytics techniques were applied:
-
-| Method | Purpose |
+### Key Variables
+| Variable | Purpose |
 |---|---|
-| Comparative Analysis | To compare grades before and after AI usage |
-| Correlation Analysis | To examine the relationship between study hours and grades |
-| Regression Analysis | To explore whether AI usage behaviour predicts academic outcomes |
-| Data Visualisation | To communicate findings clearly using Power BI |
+| `study_hours_per_day` | Measures student study effort |
+| `purpose_of_ai_usage` | Identifies how students use AI tools |
+| `grades_before_ai_usage` | Academic performance before AI adoption |
+| `grades_after_ai_usage` | Academic performance after AI adoption |
+| `daily_screen_time` | Student digital engagement indicator |
 
-## Power BI Visualisations
+---
 
-### 1. Grades Before vs After AI Usage
+## Analytical Methods
 
-This visual demonstrates whether students' grades improved after using AI tools.
+### 1. Paired t-Test
+A paired t-test was used to compare students' grades before and after AI usage.
 
-![Grades Before vs After AI](images/grades-before-after-ai.png)
+### 2. Correlation Analysis
+Pearson correlation analysis was used to examine the relationship between study hours and academic performance before and after AI adoption.
 
-### 2. Study Hours vs Grades
+### 3. Descriptive Analysis
+Frequency distribution was used to identify the most common purposes of AI usage among students.
 
-This visual demonstrates whether traditional study effort still predicts academic success.
+---
 
-![Study Hours vs Grades](images/study-hours-vs-grades.png)
+## Key Findings
 
-### 3. Purpose of AI Usage
+### Grade Improvement After AI Usage
+The average grade increased from **64.35 before AI usage** to **75.00 after AI usage**.
 
-This visual demonstrates how students academically depend on AI.
+The paired t-test produced a p-value of **0.00000038258**, which is below the 0.05 significance level. This indicates a statistically significant difference between grades before and after AI usage.
 
-![Purpose of AI Usage](images/purpose-ai-usage.png)
+### Study Hours and Academic Performance
+| Relationship | Correlation Coefficient | Interpretation |
+|---|---:|---|
+| Study hours vs grades before AI | 0.11 | Very weak positive relationship |
+| Study hours vs grades after AI | 0.32 | Weak positive relationship |
 
-## Key Insights
+The relationship between study hours and academic performance became slightly stronger after AI adoption. However, both correlations remain weak, meaning study hours alone do not strongly explain academic performance.
 
-The findings suggest that generative AI is influencing student performance and learning behaviour. While AI may support learning, it also creates uncertainty about whether traditional assessments accurately measure independent capability.
+### AI Usage Purpose
+Students used AI tools mainly for:
+
+- Research: 40%
+- Homework: 35%
+- Coding: 25%
+
+This suggests that AI is embedded in multiple learning activities, not just used as a supplementary tool.
+
+---
+
+## Visualisations
+Suggested visualisations for this project:
+
+1. Comparison of grades before and after AI usage
+2. Correlation between study hours and grades before AI usage
+3. Correlation between study hours and grades after AI usage
+4. Distribution of AI usage purposes
+
+Place exported Excel or Power BI visuals inside the `visuals/` folder and link them in this README.
+
+Example:
+
+```markdown
+![Grade Comparison](visuals/grade_comparison.png)
+```
+
+---
 
 ## Decision Implications
+The analysis suggests that universities should not eliminate AI usage. Instead, they should redesign assessment strategies to ensure academic outcomes continue to reflect genuine student capability, critical thinking, and graduate readiness.
 
-Universities should consider redesigning assessment systems by combining traditional assessments with more practical and skills-based methods, such as:
+Recommended assessment approaches include:
 
-- Case studies
-- Classroom presentations
-- Project-based tasks
-- Viva presentations
-- Applied problem-solving assessments
+- Project-based assessments
+- Industry case studies
+- Oral presentations
+- Reflective assessments
+- Portfolio-based assessments
+- Viva examinations
 
-These methods can better assess critical thinking, communication, problem-solving, and applied capability.
+A phased pilot approach is recommended before implementing large-scale assessment changes.
+
+---
 
 ## Limitations
+This analysis is based on a small sample of 20 valid observations. The findings should not be interpreted as proof that AI usage directly causes grade improvement.
 
-This dataset does not directly measure:
+Other factors such as motivation, prior academic ability, digital literacy, learning strategies, and student engagement may also influence academic performance.
 
-- Academic integrity
-- Ethical AI use
-- Critical thinking
-- Long-term knowledge retention
-- Student motivation
-- Lecturer feedback
+---
 
-Further research using student and lecturer feedback would support fairer and more reliable assessment design.
+## Recommendation
+Universities should adopt a balanced assessment framework that combines traditional assessment methods with practical, application-based, and reflective evaluation methods. This would help ensure assessment remains valid and reliable in AI-assisted learning environments.
 
-## Conclusion
+---
 
-AI-assisted learning is changing how students study and perform academically. Therefore, universities should redesign assessment systems to ensure grades reflect genuine capability, ethical learning, and graduate readiness.
+## Repository Structure
+
+```text
+ai-usage-academic-performance-analysis/
+│
+├── data/
+│   └── README.md
+│
+├── notebooks/
+│   └── ai_academic_performance_analysis.ipynb
+│
+├── visuals/
+│   └── README.md
+│
+├── src/
+│   └── analysis.py
+│
+├── docs/
+│   └── project_summary.md
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+---
+
+## Author
+**Medangi Bandara**  
+Master of Management Information Systems Student  
+Data Analytics | Business Analysis | Project Management
