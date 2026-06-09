@@ -138,32 +138,6 @@ Other factors such as motivation, prior academic ability, digital literacy, lear
 ## Recommendation
 Universities should adopt a balanced assessment framework that combines traditional assessment methods with practical, application-based, and reflective evaluation methods. This would help ensure assessment remains valid and reliable in AI-assisted learning environments.
 
----
-
-## Repository Structure
-
-```text
-ai-usage-academic-performance-analysis/
-│
-├── data/
-│   └── README.md
-│
-├── notebooks/
-│   └── ai_academic_performance_analysis.ipynb
-│
-├── visuals/
-│   └── README.md
-│
-├── src/
-│   └── analysis.py
-│
-├── docs/
-│   └── project_summary.md
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
 
 ---
 
